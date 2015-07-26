@@ -9,4 +9,4 @@
 
 base:
     'web-*':
-    - webserver.docker
+      - webserver.docker
