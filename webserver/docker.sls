@@ -10,10 +10,23 @@
 include:
   - docker
 
+webserver-image:
+   docker.pulled:
+     - name: p404/webserver
+     - tag: latest
+     - require_in: webserver-container
+     - force: True
+
+webserver-container:
+   docker.installed:
+     - name: webserver
+     - image: p404/webserver
+     - ports:
+       - "80/tcp"
+
 webserver:
   docker.running:
     - container: webserver
-    - image: p404/webserver:latest
     - port_bindings:
         "80/tcp":
             HostIp: ""
