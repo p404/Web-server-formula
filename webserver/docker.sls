@@ -13,7 +13,7 @@ include:
 webserver-image:
    docker.pulled:
      - name: p404/webserver
-     - tag: latest
+     - tag: 0.2
      - require_in: webserver-container
      - force: True
 
