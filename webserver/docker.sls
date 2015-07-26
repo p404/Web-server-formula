@@ -23,6 +23,7 @@ webserver-container:
      - image: p404/webserver:0.2
      - ports:
        - "80/tcp"
+     - mem_limit: !!null   
 
 webserver:
   docker.running:
