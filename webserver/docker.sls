@@ -20,13 +20,14 @@ webserver-image:
 webserver-container:
    docker.installed:
      - name: webserver
-     - image: p404/webserver
+     - image: p404/webserver:0.2
      - ports:
        - "80/tcp"
 
 webserver:
   docker.running:
     - container: webserver
+    - image: p404/webserver:0.2
     - port_bindings:
         "80/tcp":
             HostIp: ""
