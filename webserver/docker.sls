@@ -12,8 +12,8 @@ include:
 
 webserver:
   docker.running:
-    - container: mysuperdocker
-    - image: p404/webserver:0.2
+    - container: webserver
+    - image: p404/webserver:latest
     - port_bindings:
         "80/tcp":
             HostIp: ""
