@@ -22,3 +22,6 @@ pip-docker-py:
     - reload_modules: True
     - require:
       - pkg: python-pip
+
+python-pip:
+  pkg.installed
